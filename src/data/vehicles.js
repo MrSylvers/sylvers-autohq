@@ -1,6 +1,7 @@
 function logo(id) {
-  // genesis logo is PNG, everything else is SVG
-  return '/logos/' + id + (id === 'genesis' ? '.png' : '.svg');
+  // These brands have PNG logos (not on Wikimedia Commons as SVG or rate-limited)
+  const pngBrands = ['genesis', 'tesla', 'volvo'];
+  return '/logos/' + id + (pngBrands.includes(id) ? '.png' : '.svg');
 }
 
 export const manufacturers = [

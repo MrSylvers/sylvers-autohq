@@ -92,7 +92,7 @@ export default function BrandCarousel() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.015, duration: 0.3 }}
               onClick={() => selectManufacturer(mfr)}
-              className="flex-shrink-0 flex flex-col items-center gap-1.5 px-4 py-3 rounded-xl border-2 transition-all duration-200 min-w-[82px]"
+              className="flex-shrink-0 flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all duration-200 w-[270px]"
               style={{
                 borderColor: isSelected ? mfr.color : '#E5E5E5',
                 backgroundColor: isSelected
@@ -101,10 +101,10 @@ export default function BrandCarousel() {
               }}
             >
               <div
-                className="w-11 h-11 rounded-full flex items-center justify-center overflow-hidden"
+                className="w-[250px] h-[150px] rounded-xl flex items-center justify-center overflow-hidden"
                 style={{
                   backgroundColor: isSelected
-                    ? `color-mix(in srgb, ${mfr.color} 12%, transparent)`
+                    ? `color-mix(in srgb, ${mfr.color} 8%, transparent)`
                     : '#F0F0F0',
                 }}
               >
@@ -112,13 +112,13 @@ export default function BrandCarousel() {
                   <img
                     src={mfr.logo}
                     alt={mfr.name}
-                    className="w-8 h-8 object-contain"
+                    className="w-full h-full object-contain p-4"
                     loading="lazy"
                     onError={() => handleImgError(mfr.id)}
                   />
                 ) : (
                   <span
-                    className="font-bold text-sm"
+                    className="font-bold text-lg"
                     style={{ color: isSelected ? mfr.color : '#6B7280' }}
                   >
                     {getFallback(mfr)}
@@ -126,7 +126,7 @@ export default function BrandCarousel() {
                 )}
               </div>
               <span
-                className="text-[10px] font-medium whitespace-nowrap leading-tight"
+                className="text-xs font-medium whitespace-nowrap leading-tight"
                 style={{ color: isSelected ? mfr.color : '#6B7280' }}
               >
                 {mfr.name}
