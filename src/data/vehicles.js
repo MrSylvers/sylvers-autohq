@@ -1,52 +1,6 @@
-const LOGOS = 'https://www.carlogos.org/car-logos';
-
 function logo(id) {
-  // Map internal IDs to car-logos.org filenames
-  const map = {
-    ford: 'ford',
-    chevrolet: 'chevrolet',
-    dodge: 'dodge',
-    honda: 'honda',
-    toyota: 'toyota',
-    nissan: 'nissan',
-    bmw: 'bmw',
-    mercedes: 'mercedes-benz',
-    audi: 'audi',
-    subaru: 'subaru',
-    hyundai: 'hyundai',
-    kia: 'kia',
-    mazda: 'mazda',
-    volkswagen: 'volkswagen',
-    lexus: 'lexus',
-    jeep: 'jeep',
-    ram: 'ram',
-    gmc: 'gmc',
-    cadillac: 'cadillac',
-    buick: 'buick',
-    lincoln: 'lincoln',
-    acura: 'acura',
-    infiniti: 'infiniti',
-    mitsubishi: 'mitsubishi',
-    volvo: 'volvo',
-    genesis: 'genesis',
-    tesla: 'tesla',
-    rivian: 'rivian',
-    lucid: 'lucid',
-    polestar: 'polestar',
-    mini: 'mini',
-    porsche: 'porsche',
-    'land-rover': 'land-rover',
-    jaguar: 'jaguar',
-    maserati: 'maserati',
-    'alfa-romeo': 'alfa-romeo',
-    ferrari: 'ferrari',
-    lamborghini: 'lamborghini',
-    bentley: 'bentley',
-    'rolls-royce': 'rolls-royce',
-    'aston-martin': 'aston-martin',
-    mclaren: 'mclaren',
-  };
-  return LOGOS + '/' + map[id] + '-logo.png';
+  // genesis logo is PNG, everything else is SVG
+  return '/logos/' + id + (id === 'genesis' ? '.png' : '.svg');
 }
 
 export const manufacturers = [
