@@ -1,5 +1,4 @@
-const LOGO_DEV_TOKEN = 'pk_X7OP3TkBQtKaIHX4hBXAXA';
-const LOGO_BASE = 'https://img.logo.dev';
+const LOGO_BASE = 'https://logo.clearbit.com';
 
 const domains = {
   ford: 'ford.com',
@@ -47,7 +46,7 @@ const domains = {
 };
 
 function logo(id) {
-  return LOGO_BASE + '/' + domains[id] + '?token=' + LOGO_DEV_TOKEN;
+  return LOGO_BASE + '/' + domains[id];
 }
 
 export const manufacturers = [
